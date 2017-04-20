@@ -35,13 +35,13 @@ public class CreateServlet extends HttpServlet {
 	   
 		if(status>0){
 			out.print("WELCOME! YOUR ACCOUNT HAS OPENED");
-			RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+			RequestDispatcher rd=request.getRequestDispatcher("Register.jsp");
 			rd.include(request, response);
 		}
 		else{
 			out.print("Sorry,Registration failed. please try later");
-			RequestDispatcher rd=request.getRequestDispatcher("MyHtml.html");
-			rd.include(request, response);
+//			RequestDispatcher rd=request.getRequestDispatcher("MyHtml.html");
+//			rd.include(request, response);
 		}
 		
 		out.close();	

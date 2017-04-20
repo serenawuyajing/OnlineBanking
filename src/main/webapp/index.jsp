@@ -6,14 +6,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action = "CreateServlet" method = "post">
+	<form action = "LoginServlet" method = "post">
 		Name: <input type ="text" name = "username"/><br/>
 		Password:<input type = "password" name = "password" /><br/>
-		Repassword:<input type = "password" name = "repassword" /><br/>
-		Amount:<input type = "text" name = "amount" /><br/>
-		Address:<input type = "text" name = "address" /><br/>
-		Phone:<input type = "text" name = "phone" /><br/>
 		<input type="submit" value="login" />
+		<input type="button" value="Register" onclick="window.location='Register.jsp'" >
 	</form>
 
 </body>
