@@ -6,10 +6,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Insert title here</title>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+</style>
 </head>
 <body>
- <p>You current balance is: </p>
- <%= request.getAttribute("amount") %>.
 
+ <table>
+ 	<tr>
+    	<th>Your current balance is :</th>
+    	<td><%= request.getAttribute("amount") %></td>
+  </tr>
+ </table>
+
+  
 </body>
 </html>
