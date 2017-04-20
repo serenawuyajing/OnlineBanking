@@ -23,23 +23,24 @@ public class LoginServlet extends HttpServlet {
 		String username=request.getParameter("username");
 		String password=request.getParameter("password");
 		
-		boolean status = false;;
+		int amount = -1;
 		try {
-			status = LoginUser.login(username, password);
+			amount = LoginUser.login(username, password);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		if(status){
-			out.print("Login successfully!");
-			RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
-			rd.include(request, response);
+		if(amount != -1){
+			out.println("Login successfully!");
+			request.setAttribute("amount", amount);
+			RequestDispatcher rd=request.getRequestDispatcher("balance.jsp");
+			rd.forward(request, response);
 		}
 		else{
 			out.print("Sorry, login failed since your usename or password is incorrect!");
-//			RequestDispatcher rd=request.getRequestDispatcher("MyHtml.html");
-//			rd.include(request, response);
+			RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+			rd.include(request, response);
 		}
 		
 		out.close();	

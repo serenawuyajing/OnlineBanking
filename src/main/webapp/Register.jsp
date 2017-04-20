@@ -16,6 +16,7 @@
 		Address:<input type = "text" name = "address" /><br/>
 		Phone:<input type = "text" name = "phone" /><br/>
 		<input type="submit" value="register" />
+		<input type="button" value="Back to Login" onclick="window.location='index.jsp'" >
 	</form>
 </body>
 </html>

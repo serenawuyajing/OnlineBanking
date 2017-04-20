@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 public class LoginUser {
 	
-	public static boolean login(String username,String password) throws SQLException{
+	public static int login(String username,String password) throws SQLException{
 
 		Connection con= DBConnector.con;
 	
@@ -16,8 +16,12 @@ public class LoginUser {
 			ps.setString(2,password);
 		
 			ResultSet rs = ps.executeQuery();
+			int amount = -1;
+			if(rs.next()){
+				amount = rs.getInt("AMOUNT");
+			}
 			
-			return rs.next();
+			return amount;
 	}
 
 }
