@@ -5,27 +5,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Insert title here</title>
-<style>
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
-    text-align: left;    
-}
-</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<title>Balance Page</title>
 </head>
 <body>
+<% String amount= "";
+   String username = request.getParameter("username");
+   String password = request.getParameter("password");
+%>
 
- <table>
- 	<tr>
-    	<th>Your current balance is :</th>
-    	<td><%= request.getAttribute("amount") %></td>
-  </tr>
- </table>
-
-  
+<p>Login as <%=username%>: </br></br>
+Your current balance is : <%= request.getAttribute("amount") %>
+</p>
+ 
+ <form method="post" action="withDrawServlet">
+ 		<input type="hidden" name="username" value =<%=username%> />
+ 		<input type="hidden" name="password" value =<%=password%> />
+        <input name="amount" value="<%=amount%>" />
+        <input type='submit' value = "withdraw" />
+ </form>
+ 
+  <form method="post" action="depositServlet">
+ 		<input type="hidden" name="username" value =<%=username%> />
+ 		<input type="hidden" name="password" value =<%=password%> />
+        <input name="amount" value="<%=amount%>" />
+        <input type='submit' value = "deposit" />
+ </form>
+ 
 </body>
 </html>

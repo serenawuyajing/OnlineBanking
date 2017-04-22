@@ -16,6 +16,18 @@
   	<description></description>
   	<servlet-class>LoginServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>withDrawServlet</servlet-name>
+  	<display-name>withDrawServlet</display-name>
+  	<description></description>
+  	<servlet-class>withDrawServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>depositServlet</servlet-name>
+  	<display-name>depositServlet</display-name>
+  	<description></description>
+  	<servlet-class>depositServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>CreateServlet</servlet-name>
   	<url-pattern>/CreateServlet</url-pattern>
@@ -23,5 +35,13 @@
   <servlet-mapping>
   	<servlet-name>LoginServlet</servlet-name>
   	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>withDrawServlet</servlet-name>
+  	<url-pattern>/withDrawServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>depositServlet</servlet-name>
+  	<url-pattern>/depositServlet</url-pattern>
   </servlet-mapping>
 </web-app>
