@@ -28,6 +28,12 @@
   	<description></description>
   	<servlet-class>depositServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>LoginOutServlet</servlet-name>
+  	<display-name>LoginOutServlet</display-name>
+  	<description></description>
+  	<servlet-class>LoginOutServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>CreateServlet</servlet-name>
   	<url-pattern>/CreateServlet</url-pattern>
@@ -43,5 +49,9 @@
   <servlet-mapping>
   	<servlet-name>depositServlet</servlet-name>
   	<url-pattern>/depositServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginOutServlet</servlet-name>
+  	<url-pattern>/LoginOutServlet</url-pattern>
   </servlet-mapping>
 </web-app>

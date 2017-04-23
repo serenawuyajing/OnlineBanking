@@ -32,5 +32,9 @@ Your current balance is : <%= request.getAttribute("amount") %>
         <input type='submit' value = "deposit" />
  </form>
  
+  <form method="post" action="LoginOutServlet">
+        <input type='submit' value = "login out" />
+ </form>
+ 
 </body>
 </html>
